@@ -1,0 +1,1785 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组和字符串和指针 · C++知识积累</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ocean.GZY">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chap2/智能指针.md" />
+    
+    
+    <link rel="prev" href="类和对象.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://oceaneyes.top" target="_blank" class="custom-link">读书城南</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://awesome-book.oceangzy.top/#/" target="_blank" class="custom-link">超赞知识合集～</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../summary.html">
+            
+                <a href="../summary.html">
+            
+                    
+                    从入门到实战
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="c++语言概述.html">
+            
+                <a href="c++语言概述.html">
+            
+                    
+                    C++语言概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="基本数据类型.html">
+            
+                <a href="基本数据类型.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="内存分配.html">
+            
+                <a href="内存分配.html">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="基本控制结构.html">
+            
+                <a href="基本控制结构.html">
+            
+                    
+                    基本控制结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="函数的定义与使用.html">
+            
+                <a href="函数的定义与使用.html">
+            
+                    
+                    函数的定义与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="类和对象.html">
+            
+                <a href="类和对象.html">
+            
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.7" data-path="数组-字符串和指针.html">
+            
+                <a href="数组-字符串和指针.html">
+            
+                    
+                    数组和字符串和指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chap2/智能指针.md">
+            
+                <span>
+            
+                    
+                    智能指针
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../chap2/2-1.md">
+            
+                <span>
+            
+                    
+                    实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../chap2/2-2.md">
+            
+                <span>
+            
+                    
+                    智能指针类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../chap2/2-3.md">
+            
+                <span>
+            
+                    
+                    拷贝与复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../chap2/2-4.md">
+            
+                <span>
+            
+                    
+                    引用计数技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../chap2/2-5.md">
+            
+                <span>
+            
+                    
+                    解引用和判空以及比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chap3/3_0summary.html">
+            
+                <a href="../chap3/3_0summary.html">
+            
+                    
+                    STL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../chap3/3-1.md">
+            
+                <span>
+            
+                    
+                    STL简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../chap3/3-2.md">
+            
+                <span>
+            
+                    
+                    template编程和迭代器粗解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../chap3/3-3.md">
+            
+                <span>
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../chap3/3-4.md">
+            
+                <span>
+            
+                    
+                     函数对象（仿函数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../chap3/3-5.md">
+            
+                <span>
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../chap3/3-6.md">
+            
+                <span>
+            
+                    
+                    基础容器之vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../chap3/3-7.md">
+            
+                <span>
+            
+                    
+                    基础容器之list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../chap3/3-8.md">
+            
+                <span>
+            
+                    
+                    基础容器之deque
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.9" data-path="../chap3/3-10.md">
+            
+                <span>
+            
+                    
+                    容器适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.10" data-path="../chap3/3-11.md">
+            
+                <span>
+            
+                    
+                    容器之 set 和 multiset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.11" data-path="../chap3/3-12.md">
+            
+                <span>
+            
+                    
+                    map 和 multimap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.12" data-path="../chap3/3-13.md">
+            
+                <span>
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chap4/4_0summary.html">
+            
+                <a href="../chap4/4_0summary.html">
+            
+                    
+                    C++11&14
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../chap4/4_1.html">
+            
+                <a href="../chap4/4_1.html">
+            
+                    
+                    语言可用性的强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../chap4/4_2.html">
+            
+                <a href="../chap4/4_2.html">
+            
+                    
+                    语言运行期的强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../chap4/4_3.html">
+            
+                <a href="../chap4/4_3.html">
+            
+                    
+                    对标准库的扩充：新增容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../chap4/4_4.html">
+            
+                <a href="../chap4/4_4.html">
+            
+                    
+                    对标准库的扩充: 智能指针和引用计数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../chap4/4_5.html">
+            
+                <a href="../chap4/4_5.html">
+            
+                    
+                    对标准库的扩充: 正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../chap4/4_6.html">
+            
+                <a href="../chap4/4_6.html">
+            
+                    
+                    对标准库的扩充: 语言级线程支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../chap4/4_7.html">
+            
+                <a href="../chap4/4_7.html">
+            
+                    
+                    其他杂项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chap5/5_0summary.html">
+            
+                <a href="../chap5/5_0summary.html">
+            
+                    
+                    C++ 实现高性能 RTTI 库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../chap5/5_1.html">
+            
+                <a href="../chap5/5_1.html">
+            
+                    
+                    基础知识：运行时类型识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../chap5/5_1.html">
+            
+                <a href="../chap5/5_1.html">
+            
+                    
+                    RTTI 库的设计与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chap6/6_0summary.html">
+            
+                <a href="../chap6/6_0summary.html">
+            
+                    
+                    Makefile基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../chap6/6_1.html">
+            
+                <a href="../chap6/6_1.html">
+            
+                    
+                    Makefile 基础规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../chap6/6_3.html">
+            
+                <a href="../chap6/6_3.html">
+            
+                    
+                    关于makefile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../chap6/6_4.html">
+            
+                <a href="../chap6/6_4.html">
+            
+                    
+                    丰富我们的 makefile 语法工具箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../basic/summary.html">
+            
+                <a href="../../basic/summary.html">
+            
+                    
+                    基础知识补充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../basic/chap1/SUMMARY_01.html">
+            
+                <a href="../../basic/chap1/SUMMARY_01.html">
+            
+                    
+                    从C过渡到C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../basic/chap1/内联函数.html">
+            
+                <a href="../../basic/chap1/内联函数.html">
+            
+                    
+                    内联函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../basic/chap1/函数重载.html">
+            
+                <a href="../../basic/chap1/函数重载.html">
+            
+                    
+                    函数重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../basic/chap1/函数参数缺省.html">
+            
+                <a href="../../basic/chap1/函数参数缺省.html">
+            
+                    
+                    函数参数缺省
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../basic/chap1/引用.html">
+            
+                <a href="../../basic/chap1/引用.html">
+            
+                    
+                    引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../basic/chap1/引用与取址的区分.html">
+            
+                <a href="../../basic/chap1/引用与取址的区分.html">
+            
+                    
+                    引用与取址的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../basic/chap1/指针和引用的区别.html">
+            
+                <a href="../../basic/chap1/指针和引用的区别.html">
+            
+                    
+                    指针与引用的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../basic/chap1/命名空间.html">
+            
+                <a href="../../basic/chap1/命名空间.html">
+            
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../basic/chap1/new和delete.html">
+            
+                <a href="../../basic/chap1/new和delete.html">
+            
+                    
+                    new和delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../basic/chap1/cin和cout.html">
+            
+                <a href="../../basic/chap1/cin和cout.html">
+            
+                    
+                    cin和cout
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../basic/chap2/summary_02.html">
+            
+                <a href="../../basic/chap2/summary_02.html">
+            
+                    
+                    面向对象的思想
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../basic/chap2/面向过程与面向对象.html">
+            
+                <a href="../../basic/chap2/面向过程与面向对象.html">
+            
+                    
+                    面向过程与面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../basic/chap2/类与对象.html">
+            
+                <a href="../../basic/chap2/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../basic/chap3/summary_03.html">
+            
+                <a href="../../basic/chap3/summary_03.html">
+            
+                    
+                    构造函数与析构函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../basic/chap3/构造函数.html">
+            
+                <a href="../../basic/chap3/构造函数.html">
+            
+                    
+                    构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../basic/chap3/析构函数.html">
+            
+                <a href="../../basic/chap3/析构函数.html">
+            
+                    
+                    析构函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../basic/chap3/拷贝构造函数.html">
+            
+                <a href="../../basic/chap3/拷贝构造函数.html">
+            
+                    
+                    拷贝构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../basic/chap4/summary_04.html">
+            
+                <a href="../../basic/chap4/summary_04.html">
+            
+                    
+                    特殊情况
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../basic/chap4/this指针.html">
+            
+                <a href="../../basic/chap4/this指针.html">
+            
+                    
+                    this指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../basic/chap4/static成员.html">
+            
+                <a href="../../basic/chap4/static成员.html">
+            
+                    
+                    static成员
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../basic/chap4/单例模式.html">
+            
+                <a href="../../basic/chap4/单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../basic/chap4/const成员.html">
+            
+                <a href="../../basic/chap4/const成员.html">
+            
+                    
+                    const成员
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../basic/chap4/友元关系.html">
+            
+                <a href="../../basic/chap4/友元关系.html">
+            
+                    
+                    友元关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../basic/chap5/summary_05.html">
+            
+                <a href="../../basic/chap5/summary_05.html">
+            
+                    
+                    继承与派生
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../basic/chap5/继承和派生介绍.html">
+            
+                <a href="../../basic/chap5/继承和派生介绍.html">
+            
+                    
+                    继承和派生介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../basic/chap5/继承方式.html">
+            
+                <a href="../../basic/chap5/继承方式.html">
+            
+                    
+                    继承方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../../basic/chap5/父子关系.html">
+            
+                <a href="../../basic/chap5/父子关系.html">
+            
+                    
+                    父子关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../../basic/chap5/菱形继承.html">
+            
+                <a href="../../basic/chap5/菱形继承.html">
+            
+                    
+                    菱形继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../basic/chap6/summary_06.html">
+            
+                <a href="../../basic/chap6/summary_06.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../basic/chap6/联编.html">
+            
+                <a href="../../basic/chap6/联编.html">
+            
+                    
+                    联编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../../basic/chap6/多态.html">
+            
+                <a href="../../basic/chap6/多态.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../../basic/chap6/纯虚函数.html">
+            
+                <a href="../../basic/chap6/纯虚函数.html">
+            
+                    
+                    纯虚函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../../basic/chap6/final.html">
+            
+                <a href="../../basic/chap6/final.html">
+            
+                    
+                    final
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../basic/chap7/summary_07.html">
+            
+                <a href="../../basic/chap7/summary_07.html">
+            
+                    
+                    运算符重载
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../../basic/chap7/基础语法.html">
+            
+                <a href="../../basic/chap7/基础语法.html">
+            
+                    
+                    基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../../basic/chap7/规则详解.html">
+            
+                <a href="../../basic/chap7/规则详解.html">
+            
+                    
+                    规则详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../../basic/chap7/重载<< 与 >>.html">
+            
+                <a href="../../basic/chap7/重载<< 与 >>.html">
+            
+                    
+                    重载<<与>>
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../basic/chap8/summary_08.html">
+            
+                <a href="../../basic/chap8/summary_08.html">
+            
+                    
+                    模板
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../../basic/basic/chap8/模板概念.md">
+            
+                <span>
+            
+                    
+                    模板概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../../basic/chap8/函数模板.html">
+            
+                <a href="../../basic/chap8/函数模板.html">
+            
+                    
+                    函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../../basic/chap8/类模板.html">
+            
+                <a href="../../basic/chap8/类模板.html">
+            
+                    
+                    类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.4" data-path="../../basic/chap8/模板和友元.html">
+            
+                <a href="../../basic/chap8/模板和友元.html">
+            
+                    
+                    模板和友元
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../basic/chap9/summary_09.html">
+            
+                <a href="../../basic/chap9/summary_09.html">
+            
+                    
+                    补充知识点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../../basic/chap9/异常处理机制.html">
+            
+                <a href="../../basic/chap9/异常处理机制.html">
+            
+                    
+                    异常处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../../basic/chap9/文件流.html">
+            
+                <a href="../../basic/chap9/文件流.html">
+            
+                    
+                    文件流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../../basic/chap9/C++11标准.html">
+            
+                <a href="../../basic/chap9/C++11标准.html">
+            
+                    
+                    C++11标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../game/summary.html">
+            
+                <a href="../../game/summary.html">
+            
+                    
+                    游戏开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数组和字符串和指针</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--
+ * @Author: OCEAN.GZY
+ * @Date: 2022-08-10 22:35:29
+ * @LastEditors: OCEAN.GZY
+ * @LastEditTime: 2022-08-10 23:25:53
+ * @FilePath: \ocean-books\C++实战100天\chap1\1_7.md
+ * @Description: 注释信息
+-->
+<h1 id="&#x6570;&#x7EC4;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x6307;&#x9488;">&#x6570;&#x7EC4;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x6307;&#x9488;</h1>
+<h3 id="&#x6570;&#x7EC4;">&#x6570;&#x7EC4;</h3>
+<p>&#x6570;&#x7EC4;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x4E00;&#x7CFB;&#x5217;&#x7C7B;&#x578B;&#x76F8;&#x540C;&#x7684;&#x5143;&#x7D20;&#x3002;&#x4F8B;&#x5982;&#x5B9A;&#x4E49;&#x4E94;&#x4E2A;&#x7C7B;&#x578B;&#x76F8;&#x540C;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5B9A;&#x4E49;&#x4E94;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x4E94;&#x4E2A;&#x503C;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x5373;&#x53EF;&#x3002;
+&#x6570;&#x7EC4;&#x7684;&#x58F0;&#x660E;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code>type name[elements] //&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x58F0;&#x660E;&#x683C;&#x5F0F;&#x3002;
+</code></pre><p>&#x5176;&#x4E2D; type &#x4E3A;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#xFF0C;name &#x4E3A;&#x6570;&#x7EC4;&#x540D;&#xFF0C;elements &#x8868;&#x793A;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x3002;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x5C31;&#x662F;&#x6570;&#x7EC4;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x5B58;&#x653E;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x3002;</p>
+<p>&#x58F0;&#x660E;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>int a[5]; //&#x5305;&#x542B;&#x4E94;&#x4E2A;&#x5143;&#x7D20;&#x7684; int &#x6570;&#x7EC4;&#x3002;
+float a[5]; //&#x5305;&#x542B;&#x4E94;&#x4E2A;&#x5143;&#x7D20;&#x7684; float &#x6570;&#x7EC4;&#x3002;
+char a[5]; //&#x5305;&#x542B;&#x4E94;&#x4E2A;&#x5143;&#x7D20;&#x7684; char &#x6570;&#x7EC4;&#x3002;
+</code></pre><h4 id="&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;">&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;</h4>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x503C;&#x5728;&#x58F0;&#x660E;&#x6570;&#x7EC4;&#x65F6;&#x662F;&#x672A;&#x786E;&#x5B9A;&#x7684;&#x3002;</p>
+<p>&#x82E5;&#x8981;&#x5728;&#x58F0;&#x660E;&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x5C06;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; {} &#x5B9E;&#x73B0;&#xFF0C;&#x4F8B;&#x5982;&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4; int a[5]&#xFF1A;</p>
+<pre><code>int a[5] = {1,2,3,4,5}
+</code></pre><p>&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x82E5;&#x586B;&#x5145;&#x5143;&#x7D20;&#x4E0D;&#x5B8C;&#x6574;&#xFF0C;&#x5219;&#x5269;&#x4E0B;&#x5143;&#x7D20;&#x7684;&#x503C;&#x9ED8;&#x8BA4;&#x4E3A; 0&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>int a[5] = {1,2,3}
+</code></pre><h4 id="&#x8BBF;&#x95EE;&#x6570;&#x7EC4;">&#x8BBF;&#x95EE;&#x6570;&#x7EC4;</h4>
+<p>&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre><code>name[index]
+</code></pre><p>&#x5176;&#x4E2D; name &#x4E3A;&#x6570;&#x7EC4;&#x540D;&#x79F0;&#xFF0C;index &#x4E3A;&#x5143;&#x7D20;&#x7F16;&#x53F7;&#x3002;name[index] &#x79F0;&#x4E3A;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x3002;
+&#x4F8B;&#x5982;&#x5B9A;&#x4E49;&#x4E14;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF1A;int a[5] = {1,2,3,4,5}&#x3002;&#x53EF;&#x4EE5;&#x5F97;&#x5230; a[0]=1,a[1]=2,a[2]=3,a[3]=4,a[4]=5&#x3002;
+&#x5219; a[2] &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20; 3&#x3002;
+&#x65B0;&#x5EFA; arr1.cpp &#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+    int a[5] = {1,2,3,4,5}; //&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;&#x3002;
+    cout&lt;&lt;a[2]&lt;&lt;endl; //&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x3002;
+    return 0;
+}
+</code></pre><h3 id="&#x591A;&#x7EF4;&#x6570;&#x7EC4;">&#x591A;&#x7EF4;&#x6570;&#x7EC4;</h3>
+<p>C++ &#x4E2D;&#x652F;&#x6301;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x662F;&#x6307;&#x4E8C;&#x7EF4;&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre><code>type name[index1][index2][index3]...[indexn]
+</code></pre><p>&#x5176;&#x4E2D; index &#x7684;&#x6570;&#x91CF;&#x51B3;&#x5B9A;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x7EF4;&#x5EA6;&#xFF0C;&#x4F8B;&#x5982; type name[index1][index2] &#x8868;&#x793A;&#x7684;&#x5219;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x3002;</p>
+<h4 id="&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;">&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</h4>
+<p>&#x53EF;&#x4EE5;&#x5C06;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x770B;&#x6210;&#x4E00;&#x5F20;&#x4E8C;&#x7EF4;&#x8868;&#x3002;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4; a[3][5]&#xFF1A;
+&#x4E8C;&#x7EF4;&#x6570;&#x7EC4; a[3][5] &#x53EF;&#x4EE5;&#x8868;&#x793A;&#x6210;&#x4E00;&#x5F20;&#x4E09;&#x884C;&#x4E94;&#x5217;&#x7684;&#x4E8C;&#x7EF4;&#x8868;&#xFF0C;&#x5176;&#x521D;&#x59CB;&#x5316;&#x987A;&#x5E8F;&#x4E3A;&#xFF1A;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF0C;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x3002;</p>
+<p>&#x65B0;&#x5EFA; arr2.cpp &#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+    int a[3][5] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}; //&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;&#x3002;
+    cout&lt;&lt;a[1][2]&lt;&lt;endl; //&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x3002;
+    return 0;
+}
+</code></pre><h3 id="c-style&#x5B57;&#x7B26;&#x4E32;">C-style&#x5B57;&#x7B26;&#x4E32;</h3>
+<p>C++ &#x652F;&#x6301;&#x8D77;&#x6E90;&#x4E8E; C &#x8BED;&#x8A00;&#x7684; C-style &#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3; 10 &#x4E2A; char &#x578B;&#x5B57;&#x7B26;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>char ch[10];
+</code></pre><p>&#x6B64;&#x6570;&#x7EC4;&#x5177;&#x6709;&#x5B58;&#x50A8; 10 &#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5BB9;&#x91CF;&#x4E0D;&#x9700;&#x8981;&#x5B8C;&#x5168;&#x4F7F;&#x7528;&#xFF0C;&#x6570;&#x7EC4;&#x4E5F;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x66F4;&#x77ED;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>&#x6309;&#x7167;&#x60EF;&#x4F8B;&#xFF0C;&#x5B57;&#x7B26;&#x8868;&#x793A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7531;&#x7279;&#x6B8A;&#x5B57;&#x7B26; null &#x7ED3;&#x5C3E;&#xFF0C;&#x5176;&#x5B57;&#x9762;&#x503C;&#x53EF;&#x4EE5;&#x5199;&#x4E3A; \0&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x5728;&#x6570;&#x7EC4; char ch[10] &#x4E2D;&#x5B58;&#x5165;&#x4E00;&#x4E2A; Hello &#x5B57;&#x7B26;&#x4E32;&#xFF1A;char ch[10] = &quot;Hello&quot;;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;null &#x5B57;&#x7B26;&#x4E0D;&#x7528;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#xFF0C;C++ &#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x3002;</p>
+<h4 id="cstring">cstring</h4>
+<p>&#x5728; C++ &#x4E2D;&#x6709;&#x5927;&#x91CF;&#x7528;&#x4E8E;&#x64CD;&#x4F5C; C-style &#x5B57;&#x7B26;&#x4E32;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x4EEC;&#x96C6;&#x6210;&#x5728;&#x5934;&#x6587;&#x4EF6; <cstring> &#x4E2D;&#x3002;&#x5176;&#x5E38;&#x89C1;&#x7684;&#x51FD;&#x6570;&#xFF1A;</cstring></p>
+<table>
+<thead>
+<tr>
+<th>&#x51FD;&#x6570;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>strcpy(s1,s2)    |&#x590D;&#x5236;&#x5B57;&#x7B26;&#x4E32; s2 &#x5230; s1
+strcat(s1,s2)    |&#x5C06;&#x5B57;&#x7B26;&#x4E32; s2 &#x8FDE;&#x63A5;&#x5230; s1 &#x672B;&#x5C3E;
+strlen(s)    |&#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E32; s &#x957F;&#x5EA6;
+strcmp(s1,s2)    |&#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x4E32; s1 &#x548C; s2 &#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x76F8;&#x540C;&#x4E3A; 0&#xFF1B;s1 &lt; s2 &#x4E3A; -1&#xFF1B;s1 &gt; s2 &#x4E3A; 1
+strchr(s1,ch)    |&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411; s1 &#x4E2D;&#x5B57;&#x7B26; ch &#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;
+strstr(s1,s2)    |&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411; s1 &#x4E2D;&#x5B57;&#x7B26;&#x4E32; s2 &#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;
+&#x65B0;&#x5EFA; str1.cpp &#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+using namespace std;
+
+int main()
+{
+    char str1[18] = &quot;Hello &quot;;
+    char str2[11] = &quot;Shiyanlou!&quot;;
+
+    strcat(str1,str2);//&#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+    cout&lt;&lt;&quot;&#x8FDE;&#x63A5; str1 &#x548C; str2&#xFF1A;&quot;&lt;&lt;str1&lt;&lt;endl;
+
+    cout&lt;&lt;&quot;&#x8FDE;&#x63A5; str1 &#x548C; str2 &#x540E; str1 &#x7684;&#x957F;&#x5EA6;&#xFF1A;&quot;&lt;&lt;strlen(str1)&lt;&lt;endl; //&#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E32; str1 &#x7684;&#x957F;&#x5EA6;&#x3002;
+    return 0;
+}
+</code></pre><h3 id="&#x5B57;&#x7B26;&#x4E32;">&#x5B57;&#x7B26;&#x4E32;</h3>
+<h4 id="&#x521D;&#x59CB;&#x5316;&#x5B57;&#x7B26;&#x4E32;">&#x521D;&#x59CB;&#x5316;&#x5B57;&#x7B26;&#x4E32;</h4>
+<p>&#x521D;&#x59CB;&#x5316;&#x5B57;&#x7B26;&#x4E32; str1&#xFF1A;</p>
+<pre><code>string str1(&quot;Hello&quot;);
+</code></pre><p>&#x4E0A;&#x8FF0;&#x5C06; str1 &#x521D;&#x59CB;&#x5316;&#x4E3A; Hello&#xFF0C;&#x5176;&#x7B49;&#x6548;&#x4E8E;&#xFF1A;</p>
+<pre><code>string str1 = &quot;Hello&quot;;
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;string &#x4E0D;&#x9700;&#x8981;&#x50CF;&#x6570;&#x7EC4;&#x4E00;&#x6837;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x5185;&#x5B58;&#x3002;</p>
+<p>&#x65B0;&#x5EFA; str2.cpp &#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    string str1 = &quot;Hello &quot;;
+    string str2 = &quot;Shiyanlou!&quot;;
+
+    str1.append(str2);//&#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+    cout&lt;&lt;&quot;&#x8FDE;&#x63A5; s1 &#x548C; s2&#xFF1A;&quot;&lt;&lt;str1&lt;&lt;endl;
+
+    cout&lt;&lt;&quot;&#x8FDE;&#x63A5; s1 &#x548C; s2 &#x540E; str1 &#x7684;&#x957F;&#x5EA6;&#xFF1A;&quot;&lt;&lt;str1.length()&lt;&lt;endl; //&#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E32; str1 &#x7684;&#x957F;&#x5EA6;&#x3002;
+    return 0;
+}
+</code></pre><p>&#x5176;&#x4E2D; str1.append(str2); &#x5C06;&#x5B57;&#x7B26;&#x4E32; str2 &#x8FDE;&#x63A5;&#x5230; str1 &#x672B;&#x5C3E;&#xFF0C;&#x8F93;&#x51FA; Hello Shiyanlou!</p>
+<p>&#x5728; C++ &#x4E2D;&#xFF0C;string &#x8FD8;&#x652F;&#x6301;&#x5E38;&#x89C4;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x5982;&#xFF1A; ==&#xFF0C;&lt;&#xFF0C;=&#xFF0C;&lt;=&#xFF0C;!=&#xFF0C;+&#xFF0C;+=&#xFF0C;[]&#x3002;&#x65B0;&#x5EFA; str3.cpp &#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    string str1 = &quot;Hello &quot;;
+    string str2 = &quot;Shiyanlou!&quot;;
+    cout&lt;&lt;&quot;&#x8FDE;&#x63A5; str1 &#x548C; str2&#xFF1A;&quot;&lt;&lt;str1 + str2&lt;&lt;endl;//&#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+    return 0;
+}
+</code></pre><p>&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x8BF4;&#xFF0C;&#x5E38;&#x89C4;&#x64CD;&#x4F5C;&#x7B26; + &#x7684;&#x529F;&#x80FD;&#x4E3A; &#x8FDE;&#x63A5;&#x3002;</p>
+<h3 id="&#x6307;&#x9488;">&#x6307;&#x9488;</h3>
+<p>&#x6307;&#x9488;&#x662F; C++ &#x4ECE; C &#x4E2D;&#x7EE7;&#x627F;&#x7684;&#x91CD;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x8F83;&#x4E3A;&#x76F4;&#x63A5;&#x7684;&#x5730;&#x5740;&#x64CD;&#x4F5C;&#x624B;&#x6BB5;&#xFF0C;&#x4F7F;&#x7528;&#x6307;&#x9488;&#x53EF;&#x7075;&#x6D3B;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x7684;&#x5206;&#x914D;&#x3002;</p>
+<p>&#x6307;&#x9488;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;
+&#x6307;&#x9488;&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5177;&#x6709;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x79F0;&#x4E3A; &#x6307;&#x9488;&#x53D8;&#x91CF;&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x5185;&#x5B58;&#x5730;&#x5740;&#x3002;&#x5728;&#x4F7F;&#x7528;&#x6307;&#x9488;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x5BF9;&#x6307;&#x9488;&#x8FDB;&#x884C;&#x58F0;&#x660E;&#xFF0C;&#x5176;&#x4E00;&#x822C;&#x5F62;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre><code>type *pointer_name;
+</code></pre><p>&#x5176;&#x4E2D; type &#x8868;&#x793A;&#x6240;&#x6307;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5373;&#x8BF4;&#x660E;&#x6240;&#x6307;&#x5185;&#x5B58;&#x5355;&#x5143;&#x5B58;&#x653E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1B;* &#x8868;&#x793A;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF1B;pointer_name &#x8868;&#x793A;&#x6307;&#x9488;&#x540D;&#x3002;</p>
+<p>&#x58F0;&#x660E;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x7684;&#x6307;&#x9488;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code>int *p; //&#x58F0;&#x660E; int &#x578B;&#x7684;&#x6307;&#x9488;&#x53D8;&#x91CF; p&#x3002;
+float *p1; //&#x58F0;&#x660E; float &#x578B;&#x7684;&#x6307;&#x9488;&#x53D8;&#x91CF; p1&#x3002;
+char *p2; //&#x58F0;&#x660E; char &#x578B;&#x7684;&#x6307;&#x9488;&#x53D8;&#x91CF; p2&#x3002;
+</code></pre><p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6307;&#x9488;&#x5B9E;&#x9645;&#x5B58;&#x653E;&#x7684;&#x662F;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6307;&#x9488;&#x53D8;&#x91CF;&#x7528;&#x4E8E;&#x6307;&#x5411;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x7684;&#x53D8;&#x91CF;&#x6216;&#x5E38;&#x91CF;&#x3002;</p>
+<p>C++ &#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x4E0E;&#x5730;&#x5740;&#x76F8;&#x5173;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<em> &#x548C; &amp; &#x3002;&#x5176;&#x4E2D; </em> &#x79F0;&#x4E3A; &#x6307;&#x9488;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6307;&#x9488;&#x6240;&#x6307;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x4F8B;&#x5982; *p &#x8868;&#x793A;&#x6307;&#x9488; p &#x6240;&#x6307;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF1B;&amp; &#x79F0;&#x4E3A; &#x53D6;&#x5730;&#x5740;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x4F8B;&#x5982;&#x6709;&#x53D8;&#x91CF; i&#xFF0C;&#x5219; &amp;i &#x8868;&#x793A; i &#x7684;&#x5B58;&#x50A8;&#x5730;&#x5740;&#x3002;</p>
+<h4 id="&#x6307;&#x9488;&#x7684;&#x8D4B;&#x503C;&#x4E0E;&#x4F7F;&#x7528;">&#x6307;&#x9488;&#x7684;&#x8D4B;&#x503C;&#x4E0E;&#x4F7F;&#x7528;</h4>
+<p>&#x5B9A;&#x4E49;&#x6307;&#x9488;&#x540E;&#x6211;&#x4EEC;&#x4EC5;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5730;&#x5740;&#x7684;&#x6307;&#x9488;&#x53D8;&#x91CF;&#xFF0C;&#x82E5;&#x8981;&#x786E;&#x5B9A;&#x6307;&#x9488;&#x53D8;&#x91CF;&#x5B58;&#x653E;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9;&#x6307;&#x9488;&#x8D4B;&#x503C;&#x5B9E;&#x73B0;&#x3002;&#x5176;&#x57FA;&#x672C;&#x5F62;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>&#x5728;&#x5B9A;&#x4E49;&#x6307;&#x9488;&#x65F6;&#x4E3A;&#x6307;&#x9488;&#x8D4B;&#x503C;&#xFF1A;<pre><code>type *pointer_name=&#x521D;&#x59CB;&#x5730;&#x5740;;
+</code></pre></li>
+<li>&#x5728;&#x5B9A;&#x4E49;&#x6307;&#x9488;&#x540E;&#x4E3A;&#x6307;&#x9488;&#x8D4B;&#x503C;&#xFF1A;<pre><code>type *pointer_name;
+pointer_name=&#x521D;&#x59CB;&#x5730;&#x5740;;
+</code></pre>&#x5176;&#x4E2D; &#x521D;&#x59CB;&#x5730;&#x5740; &#x4E3A;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x4E00;&#x822C;&#x4F7F;&#x7528; &amp;&#x5BF9;&#x8C61;&#x540D; &#x83B7;&#x53D6;&#x3002;</li>
+</ol>
+<p>&#x4F8B;&#x5982;&#x5C06;&#x6307;&#x9488; p &#x6307;&#x5411;&#x53D8;&#x91CF; po1 &#x7684;&#x5730;&#x5740;&#xFF0C;&#x5176;&#x4E2D;&#x53D8;&#x91CF; po1 &#x7684;&#x503C;&#x4E3A; 6&#xFF1A;</p>
+<pre><code>int po1=6; //&#x5B9A;&#x4E49; int &#x578B;&#x53D8;&#x91CF; po1&#xFF0C;&#x8D4B;&#x503C;&#x4E3A; 6&#x3002;
+int *p=&amp;po1; //&#x6307;&#x9488;&#x53D8;&#x91CF; p &#x6307;&#x5411;&#x53D8;&#x91CF; po1 &#x7684;&#x5730;&#x5740;&#x3002;
+</code></pre><p>&#x5176;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
+<pre><code>int po1=6; //&#x5B9A;&#x4E49; int &#x578B;&#x53D8;&#x91CF; po1&#xFF0C;&#x8D4B;&#x503C;&#x4E3A; 6&#x3002;
+int *p; //&#x5B9A;&#x4E49;&#x6307;&#x9488;&#x53D8;&#x91CF; p
+p=&amp;po1; //&#x6307;&#x9488;&#x53D8;&#x91CF; p &#x6307;&#x5411;&#x53D8;&#x91CF; po1 &#x7684;&#x5730;&#x5740;&#x3002;
+</code></pre><p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x52A0;&#x6DF1;&#x4E00;&#x4E0B;&#x6307;&#x9488;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x4F7F;&#x7528;&#xFF0C;&#x65B0;&#x5EFA; pointer1.cpp&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+    int po1=6; //&#x5B9A;&#x4E49; int &#x578B;&#x53D8;&#x91CF; po1&#xFF0C;&#x8D4B;&#x503C;&#x4E3A; 6&#x3002;
+    int *p=&amp;po1; //&#x6307;&#x9488;&#x53D8;&#x91CF; p &#x6307;&#x5411;&#x53D8;&#x91CF; po1 &#x7684;&#x5730;&#x5740;&#x3002;
+
+    cout &lt;&lt; &quot;&#x83B7;&#x53D6;&#x6307;&#x9488;&#x6240;&#x6307;&#x53D8;&#x91CF;&#x7684;&#x503C;: &quot;&lt;&lt;*p&lt;&lt;endl;
+    cout &lt;&lt; &quot;&#x83B7;&#x53D6;&#x6307;&#x9488;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;: &quot;&lt;&lt;&amp;p&lt;&lt;endl;
+    return 0;
+}
+</code></pre><p>&#x5176;&#x4E2D; <em>p &#x8FD0;&#x7528;&#x6307;&#x9488;&#x8FD0;&#x7B97;&#x7B26; </em> &#x83B7;&#x53D6;&#x6307;&#x9488; p &#x6240;&#x6307;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF1B;&amp;p &#x8FD0;&#x7528;&#x53D6;&#x5730;&#x5740;&#x8FD0;&#x7B97;&#x7B26; &amp; &#x83B7;&#x53D6;&#x6307;&#x9488; p &#x7684;&#x5730;&#x5740;&#x3002;</p>
+<h3 id="&#x5F15;&#x7528;">&#x5F15;&#x7528;</h3>
+<p>&#x5F15;&#x7528;&#x662F;&#x6307;&#x5BF9;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x53D8;&#x91CF;&#x522B;&#x540D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5F15;&#x7528;&#x540D;&#x6765;&#x6307;&#x5411;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5F15;&#x7528;&#x4E0E;&#x6307;&#x9488;&#x4E3B;&#x8981;&#x6709;&#x4E09;&#x4E2A;&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; &#x6307;&#x9488;&#x540D;=0 &#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x7A7A;&#x6307;&#x9488;&#xFF0C;&#x4F46;&#x4E0D;&#x5B58;&#x5728;&#x7A7A;&#x5F15;&#x7528;&#x3002;</li>
+<li>&#x6307;&#x9488;&#x53EF;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x95F4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x5F15;&#x7528;&#x53EA;&#x80FD;&#x5728;&#x5B9A;&#x4E49;&#x65F6;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>&#x6307;&#x9488;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x5185;&#x5B58;&#x7684;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x5355;&#x5143;&#xFF1B;&#x800C;&#x5F15;&#x7528;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x539F;&#x53D8;&#x91CF;&#x7684;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#x800C;&#x5DF2;&#x3002;</li>
+</ul>
+<p>&#x58F0;&#x660E;&#x5F15;&#x7528;&#x53D8;&#x91CF;&#x7684;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre><code>type &amp;&#x5F15;&#x7528;&#x540D;=&#x88AB;&#x6307;&#x5BF9;&#x8C61;&#x540D;&#xFF1B;
+</code></pre><p>&amp; &#x5728;&#x8FD9;&#x91CC;&#x662F;&#x6807;&#x8BC6;&#x4F5C;&#x7528;&#xFF0C;&#x800C;&#x975E;&#x53D6;&#x5730;&#x5740;&#x8FD0;&#x7B97;&#x7B26;&#x3002;
+&#x4F8B;&#x5982;&#x5B9A;&#x4E49;&#x5F15;&#x7528; x&#xFF0C;&#x5B83;&#x662F;&#x6574;&#x578B;&#x53D8;&#x91CF; i &#x7684;&#x5F15;&#x7528;&#xFF1A;</p>
+<pre><code>int &amp;x=i;
+</code></pre><p>&#x6211;&#x4EEC;&#x901A;&#x8FC7; &#x521D;&#x59CB;&#x5316;&#x65F6;&#x95F4; &#x6765;&#x533A;&#x522B;&#x4E00;&#x4E0B;&#x6307;&#x9488;&#x548C;&#x5F15;&#x7528;&#xFF0C;&#x65B0;&#x5EFA; pointer2.cpp &#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+    int i=3;
+    int j=4;
+
+    int &amp;x=i; //&#x5B9A;&#x4E49;&#x5F15;&#x7528; x&#xFF0C;&#x5B83;&#x662F;&#x6574;&#x578B;&#x53D8;&#x91CF; i &#x7684;&#x5F15;&#x7528;&#x3002;
+    int *s; //&#x5B9A;&#x4E49;&#x6307;&#x9488; s&#x3002;
+    s=&amp;j; //&#x6307;&#x9488; s &#x6307;&#x5411;&#x6574;&#x578B;&#x53D8;&#x91CF; j &#x7684;&#x5730;&#x5740;&#x3002;
+
+    cout &lt;&lt; &quot;&#x521D;&#x59CB;&#x5316;&#x5F15;&#x7528; x: &quot; &lt;&lt; x &lt;&lt; endl;
+    cout &lt;&lt; &quot;&#x521D;&#x59CB;&#x5316;&#x6307;&#x9488; s: &quot; &lt;&lt; *s &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre><p>&#x5176;&#x4E2D; int &amp;x=i; &#x8868;&#x793A;&#x5728; &#x5B9A;&#x4E49;&#x5F15;&#x7528;&#x65F6; &#x8FDB;&#x884C;&#x7684;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x3002;s=&amp;j; &#x8868;&#x793A;&#x5728; &#x5B9A;&#x4E49;&#x6307;&#x9488;&#x540E; &#x8FDB;&#x884C;&#x7684;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">OceanGZY &#xA9; 2019-2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-07-30 11:30:55
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="类和对象.html" class="navigation navigation-prev " aria-label="Previous page: 类和对象">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chap2/智能指针.md" class="navigation navigation-next " aria-label="Next page: 智能指针">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数组和字符串和指针","level":"1.2.1.7","depth":3,"next":{"title":"智能指针","level":"1.2.2","depth":2,"path":"practice/chap2/智能指针.md","ref":"practice/chap2/智能指针.md","articles":[{"title":"实现原理","level":"1.2.2.1","depth":3,"path":"practice/chap2/2-1.md","ref":"practice/chap2/2-1.md","articles":[]},{"title":"智能指针类","level":"1.2.2.2","depth":3,"path":"practice/chap2/2-2.md","ref":"practice/chap2/2-2.md","articles":[]},{"title":"拷贝与复制","level":"1.2.2.3","depth":3,"path":"practice/chap2/2-3.md","ref":"practice/chap2/2-3.md","articles":[]},{"title":"引用计数技术","level":"1.2.2.4","depth":3,"path":"practice/chap2/2-4.md","ref":"practice/chap2/2-4.md","articles":[]},{"title":"解引用和判空以及比较","level":"1.2.2.5","depth":3,"path":"practice/chap2/2-5.md","ref":"practice/chap2/2-5.md","articles":[]}]},"previous":{"title":"类和对象","level":"1.2.1.6","depth":3,"path":"practice/chap1/类和对象.md","ref":"practice/chap1/类和对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","sharing-plus","back-to-top-button","expandable-chapters-small","code","tbfed-pagefooter","hide-element","chapter-fold","donate","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"OceanGZY &copy 2019-2022","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://oceaneyes.top/img/alipay.jpg","alipayText":"支付宝捐赠","button":"赞赏","title":"","wechat":"https://oceaneyes.top/img/wechatpay.jpg","wechatText":"微信捐赠"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{"douban":false,"facebook":false,"pocket":false,"qq":true,"qzone":true,"twitter":false,"weibo":true,"all":["douban","facebook","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ocean.GZY","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++知识积累","language":"zh-hans","links":{"sidebar":{"读书城南":"http://oceaneyes.top","超赞知识合集～":"https://awesome-book.oceangzy.top/#/"}},"gitbook":"*","description":"心路历程"},"file":{"path":"practice/chap1/数组-字符串和指针.md","mtime":"2023-07-30T11:30:55.907Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-30T11:50:23.315Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
